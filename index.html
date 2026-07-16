@@ -112,7 +112,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('cabin.jpg') no-repeat center center;
+            /* Fixed Path */
+            background: url('assets/images/cabin.jpg') no-repeat center center;
             background-size: cover;
             z-index: 2;
             opacity: 0;
@@ -941,8 +942,9 @@
         
         <div class="vignette-overlay"></div>
         
+        <!-- Fixed Path -->
         <video id="charter-video" playsinline muted preload="auto">
-            <source src="splash.mp4" type="video/mp4">
+            <source src="assets/videos/splash.mp4" type="video/mp4">
         </video>
 
         <div class="cabin-background-overlay" id="cabin-img-bg"></div>
@@ -1019,7 +1021,8 @@
             <div class="stage stage-2">
                 <div class="pilot-card-vertical liquid-glass">
                     <div class="pilot-pfp">
-                        <img src="captain.jpg" alt="Captain J. Persaud" onerror="this.style.display='none'; document.getElementById('captain-fallback').style.display='flex';">
+                        <!-- Fixed Path & Extension -->
+                        <img src="assets/images/captain.jpeg" alt="Captain J. Persaud" onerror="this.style.display='none'; document.getElementById('captain-fallback').style.display='flex';">
                         <div id="captain-fallback" class="avatar-fallback" style="display: none; height:100%; width:100%;">
                             <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                         </div>
@@ -1048,8 +1051,9 @@
                 </div>
 
                 <div class="video-bubble-card liquid-glass">
+                    <!-- Fixed Path -->
                     <video autoplay muted loop playsinline>
-                        <source src="flying.mp4" type="video/mp4">
+                        <source src="assets/videos/flying.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -1064,19 +1068,22 @@
 
                     <div class="destination-row-container">
                         <div class="destination-card-mini liquid-glass">
-                            <div class="dest-img-placeholder" style="background-image: url('niagara.jpg');"></div>
+                            <!-- Fixed Path -->
+                            <div class="dest-img-placeholder" style="background-image: url('assets/images/niagara.jpg');"></div>
                             <h4>Niagara Falls</h4>
                             <span>25 Mins from CYSN</span>
                             <p>World-famous private scenic waterfalls and vibrant entertainment districts.</p>
                         </div>
                         <div class="destination-card-mini liquid-glass">
-                            <div class="dest-img-placeholder" style="background-image: url('toronto.jpg');"></div>
+                            <!-- Fixed Path -->
+                            <div class="dest-img-placeholder" style="background-image: url('assets/images/toronto.jpg');"></div>
                             <h4>Toronto</h4>
                             <span>1 Hour from CYSN</span>
                             <p>Canada's premier urban metro with legendary dining, events, and shopping.</p>
                         </div>
                         <div class="destination-card-mini liquid-glass">
-                            <div class="dest-img-placeholder" style="background-image: url('winecountry.jpg');"></div>
+                            <!-- Fixed Path -->
+                            <div class="dest-img-placeholder" style="background-image: url('assets/images/winecountry.jpg');"></div>
                             <h4>Niagara Wine</h4>
                             <span>15 Mins from CYSN</span>
                             <p>Stunning, award-winning estate vineyards and curated winery tours.</p>
@@ -1086,7 +1093,8 @@
 
                 <div class="homebase-card liquid-glass">
                     <div class="homebase-img">
-                        <img src="homebase.jpg" alt="Niagara Private Terminal Base" onerror="this.style.display='none'; document.getElementById('base-fallback').style.display='flex';">
+                        <!-- Fixed Path -->
+                        <img src="assets/images/homebase.jpg" alt="Niagara Private Terminal Base" onerror="this.style.display='none'; document.getElementById('base-fallback').style.display='flex';">
                         <div id="base-fallback" class="avatar-fallback" style="display: none; height: 100%; width: 100%; border-radius: 12px;">
                             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                         </div>
@@ -1216,11 +1224,9 @@
         document.addEventListener("DOMContentLoaded", () => {
             gsap.registerPlugin(ScrollTrigger);
 
-            // Reverted back to your working splash.mp4 file!
+            // Fixed Path in JS Reference
             const video = document.getElementById("charter-video");
-            
-            // Revert the src dynamically just in case it was left as the folder path in HTML
-            video.src = "splash.mp4"; 
+            video.src = "assets/videos/splash.mp4"; 
             
             const morphBox = document.getElementById("interactive-morph-box");
             const openBtn = document.getElementById("open-booking-btn");
